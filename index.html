@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR SEL</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #e0bbff; /* اللون البنفسجي الفاتح */
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">Only When it stops, maybe I will stop loving you, Sely</h1> <!-- عنوان قابل للتعديل -->
+    <div id="counter">0</div>
+
+    <script>
+        let count = 0;
+        function infiniteCounter() {
+            document.getElementById('counter').textContent = count;
+            count++;
+            setTimeout(infiniteCounter, 1); // يزيد كل ثانية
+        }
+        infiniteCounter();
+
+        // تغيير عنوان الصفحة
+        document.getElementById('pageTitle').textContent = "Only When it stops, maybe I will stop loving you, Sely"
+    </script>
+</body>
+</html>
